@@ -25,11 +25,8 @@ function App() {
         </p>
       </div>
       <SideBar />
-      <MainArea color={color} count={count} />
-      <Footer setCount={setCount} setInc={setInc}/>
-     
-     
-     
+      <MainArea  />
+      <Footer />
     </div>
     </OurContext.Provider>
   )
