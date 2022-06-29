@@ -1,8 +1,9 @@
-import React, {useState} from "react"
+import React, {useState,createContext} from "react"
 import { createRoot } from "react-dom/client"
 import SideBar from "./components/sideBar"
 import MainArea from "./components/mainArea"
 import Footer from "./components/Footer"
+import OurContext from "./OurContext"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
  
 
   return (
+    <OurContext.Provider value={{count,setCount,color,setColor,inc,setInc}}>
     <div className="grid-parent">
       <div className="header">
         <h1 className="text-6xl">Welcome To Our App...</h1>
@@ -22,13 +24,14 @@ function App() {
           This page has been liked <strong>{inc}</strong> times.
         </p>
       </div>
-      <SideBar color={color} count={count} setCount={setCount} setColor={setColor}/>
+      <SideBar />
       <MainArea color={color} count={count} />
       <Footer setCount={setCount} setInc={setInc}/>
      
      
      
     </div>
+    </OurContext.Provider>
   )
 }
 
