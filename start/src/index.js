@@ -21,7 +21,7 @@ function App() {
     setInc(inc+1) }
 
   return (
-    <div className="">
+    <div className="grid-parent">
       <div className="header">
         <h1 className="text-6xl">Welcome To Our App...</h1>
         <p>The current size is {count} and the current color is {color}.</p>
